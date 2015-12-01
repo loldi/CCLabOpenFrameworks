@@ -10,6 +10,6 @@ Git link: https://github.com/loldi/CCLabOpenFrameworks/tree/master/ofFinal
 <br>
 
 
-####DEMO#### (click)
+####DEM)(click)
 
 [![y dis no load?](http://genuson.com/wp-content/uploads/2015/11/Screen-Shot-2015-11-30-at-3.43.29-PM.png)](https://www.youtube.com/watch?v=voxLnRWhfFs)
