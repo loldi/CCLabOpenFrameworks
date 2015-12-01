@@ -28,8 +28,8 @@ public:
     
     
     ofImage duck;
-    float posX = 50;
-    float xVel = 2.0;
+    float posX = ofRandom(50,750);
+    float xVel = ofRandom(-1,2.0);
     float posY = 250;
     
     

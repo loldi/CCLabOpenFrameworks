@@ -28,8 +28,8 @@ public:
     
     
     ofImage target;
-    float posX = ofRandom(600,800);
-    float xVel = -1.0;
+    float posX = ofRandom(100,800);
+    float xVel = ofRandom(-1, 3);
     float posY = 250;
     
     

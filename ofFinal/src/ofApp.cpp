@@ -38,6 +38,14 @@ void ofApp::setup(){
     bullet4.loadImage("bullet.png");
     bullet5.loadImage("bullet.png");
     
+    zero.loadImage("0.png");
+    fif.loadImage("50.png");
+    hun.loadImage("100.png");
+    hunfif.loadImage("150.png");
+    two.loadImage("200.png");
+    twofif.loadImage("250.png");
+    
+    
     bg.loadImage("woodbg.png");
     cloud.loadImage("cloud2.png");
     
@@ -59,6 +67,8 @@ void ofApp::setup(){
 
     duck.setup();
     target.setup();
+    duck2.setup();
+    target2.setup();
 
 
 }
@@ -99,6 +109,8 @@ void ofApp::update(){
     
     duck.update();
     target.update();
+    duck2.update();
+    target2.update();
     
     if (bullets == 4){
         bullet1.clear();
@@ -144,7 +156,7 @@ void ofApp::draw(){
     xWat1 = xWat1 + xWat1Vel;
     xWat2 = xWat2 + xWat2Vel;
     
-    
+    duck2.draw();
     
     water1.draw(xWat1,350);
     
@@ -153,6 +165,7 @@ void ofApp::draw(){
     
     
     duck.draw();
+    target2.draw();
     
     
     water2.draw(xWat2, 350);
@@ -160,6 +173,44 @@ void ofApp::draw(){
     booth.draw(0,475);
     curtain.draw(0,0);
     rifle.draw(mouseX, 400);
+    
+    if (hit == 0){
+        
+        zero.draw(50, 50);
+    }
+    
+    if (hit == 1){
+        
+        zero.clear();
+        fif.draw(50,50);
+    }
+    
+    if (hit == 2){
+        
+        fif.clear();
+        hun.draw(50,50);
+    }
+    
+    if (hit == 3){
+        
+        hun.clear();
+        hunfif.draw(50,50);
+    }
+    
+    if (hit == 4){
+        
+        hunfif.clear();
+        two.draw(50,50);
+    }
+    
+    if (hit == 5){
+        
+        two.clear();
+        twofif.draw(50,50);
+    }
+    
+    
+    
     
     crosshair.draw(mouseX, mouseY);
     
@@ -170,6 +221,7 @@ void ofApp::draw(){
         shotFired = false;
         duck.xVel = -duck.xVel;
         ping.play();
+        hit = hit + 1;
     }
     
     if (shotFired == true && mouseX > target.posX-10 && mouseX < target.posX+10 && mouseY > 290 && mouseY <315) {
@@ -177,7 +229,26 @@ void ofApp::draw(){
         shotFired = false;
         target.xVel = -target.xVel;
         ping.play();
+        hit = hit + 1;
     }
+    
+    
+    if (shotFired == true && mouseX > duck2.posX-10 && mouseX < duck2.posX+10 && mouseY > 280 && mouseY <310) {
+        
+        shotFired = false;
+        duck.xVel = -duck.xVel;
+        ping.play();
+        hit = hit + 1;
+    }
+    
+    if (shotFired == true && mouseX > target2.posX-10 && mouseX < target2.posX+10 && mouseY > 290 && mouseY <315) {
+        
+        shotFired = false;
+        target.xVel = -target.xVel;
+        ping.play();
+        hit = hit + 1;
+    }
+    
     
     empty1.draw(750, 500);
     empty2.draw(775, 500);

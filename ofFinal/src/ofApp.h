@@ -53,6 +53,13 @@ class ofApp : public ofBaseApp{
     ofImage Go;
     ofImage ready;
     
+    ofImage zero;
+    ofImage fif;
+    ofImage hun;
+    ofImage hunfif;
+    ofImage two;
+    ofImage twofif;
+    
     
     ofSoundPlayer bgmusic;
     ofSoundPlayer gunshot;
@@ -72,6 +79,10 @@ class ofApp : public ofBaseApp{
     Duck duck;
     Target target;
     
+    Duck duck2;
+    
+    Target target2;
+    
     
     float targetX = 599;
     float targetVel = -0.3;
@@ -82,6 +93,7 @@ class ofApp : public ofBaseApp{
     
     int bullets = 5;
     
+    int hit = 0;
     
     int timer = 5000;
     int delay;
