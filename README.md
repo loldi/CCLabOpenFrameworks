@@ -10,6 +10,12 @@ Git link: https://github.com/loldi/CCLabOpenFrameworks/tree/master/ofFinal
 <br>
 
 
-####DEM)(click)
+####DEMO(click)
 
 [![y dis no load?](http://genuson.com/wp-content/uploads/2015/11/Screen-Shot-2015-11-30-at-3.43.29-PM.png)](https://www.youtube.com/watch?v=voxLnRWhfFs)
+
+You have 5 bullets, make them count!
+
+Shoot the ducks for 100 points or shoot the targets for 50 points!
+
+Watch out, something crazy probably happens to make it difficult!
